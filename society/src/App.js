@@ -8,6 +8,7 @@ import Gardner from './gardner/gardner';
 import Plumber from './plumber/plumber';
 import Maid from './maid/maid';
 import Others from './others/others';
+import UserDashBoard from './userdashboard/userdashboard';
 
 import {BrowserRouter as Router, Switch, Route, Link} from 'react-router-dom';
 class App extends Component {
@@ -23,13 +24,14 @@ class App extends Component {
           
           <Switch>
             <Route exact path='/profile' component={Profile} />
-            <Route exact path='/maintenance' component={Maintenance} />
-            <Route exact path='/electrician' component={Electrician} />
-            <Route exact path='/gardner' component={Gardner} />
-            <Route exact path='/carpenter' component={Carpenter} />
-            <Route exact path='/plumber' component={Plumber} />
+            <Route path='/maintenance' component={Maintenance} />
+            <Route path='/electrician' component={Electrician} />
+            <Route path='/gardner' component={Gardner} />
+            <Route path='/carpenter' component={Carpenter} />
+            <Route path='/plumber' component={Plumber} />
             <Route exact path='/maid' component={Maid} />
             <Route exact path='/others' component={Others} />
+			<Route exact path='/userdashboard' component={UserDashBoard} />
             </Switch>
           </div>
       </Router>
